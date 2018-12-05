@@ -1,9 +1,12 @@
 {
   "name": "@kuaizi/vue-cli-plugin-auto-router",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Vue Router route generator",
   "main": "./index.js",
-  "repository": "https://github.com/kuaizi-co/vue-cli-plugin-auto-router.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kuaizi-co/vue-cli-plugin-auto-router.git"
+  },
   "scripts": {
     "dev": "vue serve",
     "lint": "eslint index.js",
@@ -24,5 +27,12 @@
     "vue-route-generator": "^0.3.3",
     "vue-template-compiler": "^2.5.17"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "conventional-changelog-cli": "^2.0.11",
+    "release-it": "^8.2.0"
+  },
+  "bugs": {
+    "url": "https://github.com/kuaizi-co/vue-cli-plugin-auto-router/issues"
+  },
+  "homepage": "https://github.com/kuaizi-co/vue-cli-plugin-auto-router#readme"
 }
