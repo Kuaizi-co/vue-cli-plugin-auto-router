@@ -24,5 +24,8 @@
     "vue-route-generator": "^0.3.3",
     "vue-template-compiler": "^2.5.17"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "conventional-changelog-cli": "^2.0.11",
+    "release-it": "^8.2.0"
+  }
 }
