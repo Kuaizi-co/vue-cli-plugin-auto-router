@@ -10,7 +10,8 @@
   "scripts": {
     "dev": "vue serve",
     "lint": "eslint index.js",
-    "release": "release-it"
+    "release": "release-it",
+    "deploy": "sh deploy.sh"
   },
   "keywords": [
     "vue-cli-plugin-auto-router",
