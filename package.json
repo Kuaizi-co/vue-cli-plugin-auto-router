@@ -1,6 +1,6 @@
 {
   "name": "@kuaizi/vue-cli-plugin-auto-router",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Vue Router route generator",
   "main": "./index.js",
   "repository": {
@@ -10,7 +10,8 @@
   "scripts": {
     "dev": "vue serve",
     "lint": "eslint index.js",
-    "release": "release-it"
+    "release": "release-it",
+    "deploy": "sh deploy.sh"
   },
   "keywords": [
     "vue-cli-plugin-auto-router",
