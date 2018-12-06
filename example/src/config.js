@@ -7,7 +7,7 @@ const config = {
     baseURL: '/mock'
   },
   prod: {
-    baseURL: '/'
+    baseURL: 'https://easy-mock.com/mock/5ba83adde786c911a33a5090'
   }
 }
 

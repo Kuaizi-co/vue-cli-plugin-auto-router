@@ -52,7 +52,7 @@ function addStyleResource (rule) {
 const pages = getPagesConfig(VUE_APP_ALLOW_ENTRY)
 module.exports = {
   // filenameHashing: false,
-
+  baseUrl: process.env.NODE_ENV === 'production' ? '/vue-cli-plugin-auto-router/' : '/',
   // 多页配置
   pages: {
     ...pages
