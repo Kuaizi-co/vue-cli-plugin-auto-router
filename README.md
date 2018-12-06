@@ -10,6 +10,27 @@
 vue add @kuaizi/vue-cli-plugin-auto-router
 ```
 
+默认页面文件夹为 `./src/pages/*/views/`，自定义需要添加配置 `package.json` 中的 `autoRouterConf` 字段
+
+```
+{
+  //...
+  autoRouterConf: {
+    pages: ['./src/pages/**/views/'],
+    importPrefix: '../views'
+  }
+  //...
+}
+```
+
+## example
+
+```
+> cd example
+> yarn
+> yarn dev
+```
+
 
 # auto-router-webpack-plugin
 
