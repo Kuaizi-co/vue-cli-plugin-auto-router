@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["index-account"],{a04c:function(n,e,t){"use strict";t.r(e);var a=function(){var n=this,e=n.$createElement,t=n._self._c||e;return t("div",[n._v("aaa")])},c=[],u=t("2877"),o={},i=Object(u["a"])(o,a,c,!1,null,null,null);i.options.__file="account.vue";e["default"]=i.exports}}]);
+//# sourceMappingURL=index-account.df11a2e1.js.map

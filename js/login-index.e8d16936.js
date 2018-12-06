@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["login-index"],{2138:function(n,e,i){"use strict";i.r(e);var o=function(){var n=this,e=n.$createElement,i=n._self._c||e;return i("h1",[n._v("hello")])},t=[],l=i("2877"),r=function(n){n.options._meta='\r\n{\r\n  "name": "login-index",\r\n  "sidebar": 0\r\n}\r\n'},u=r,s={},a=Object(l["a"])(s,o,t,!1,null,null,null);"function"===typeof u&&u(a),a.options.__file="index.vue";e["default"]=a.exports}}]);
+//# sourceMappingURL=login-index.e8d16936.js.map

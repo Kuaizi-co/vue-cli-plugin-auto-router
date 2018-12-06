@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["index-manage-word"],{"650a":function(n,e,t){"use strict";t.r(e);var a=function(){var n=this,e=n.$createElement,t=n._self._c||e;return t("div",{staticStyle:{padding:"50px"}},[t("h2",[n._v("日志："+n._s(n.$route.params.id))])])},i=[],r={data:function(){return{}}},o=r,u=t("2877"),s=Object(u["a"])(o,a,i,!1,null,null,null);s.options.__file="word.vue";e["default"]=s.exports}}]);
+//# sourceMappingURL=index-manage-word.22b3bb63.js.map
