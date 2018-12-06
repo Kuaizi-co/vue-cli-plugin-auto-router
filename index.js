@@ -10,7 +10,7 @@ const merge = (source, dest) => {
 }
 
 module.exports = (api, options) => {
-  const defaultConf = { pages: './src/pages/*/views/' }
+  const defaultConf = { pages: './src/pages/*/views/', importPrefix: '../views/' }
   const pkgFile = path.resolve(process.cwd(), 'package.json')
   let pkgConf = {}
   if (fs.existsSync(pkgFile)) {
