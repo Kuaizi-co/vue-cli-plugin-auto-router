@@ -23,6 +23,21 @@ vue add @kuaizi/vue-cli-plugin-auto-router
 }
 ```
 
+**webpack默认不启动对文件增删进行watch监听**，但我们可以手动增加设置
+
+```
+# webapck.config.js
+{
+  // 默认为false
+  watch: true,
+  // 忽略目录
+  watchOptions: {
+    ignored: ['node_modules', 'tests'],
+    // 轮询时间配置查看webpack官网
+  },
+}
+```
+
 ## example
 
 ```
