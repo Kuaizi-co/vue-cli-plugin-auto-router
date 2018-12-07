@@ -15,7 +15,7 @@ const pluginName = 'autoRouterWebpackPlugin'
 
 class autoRouterWebpackPlugin {
   constructor (options) {
-    this.options = Object.assign({ importPrefix: '../views/' }, options)
+    this.options = Object.assign({ importPrefix: './views/' }, options)
     assert(options, chalk.red.bold(`${pluginName} options is required!!!`))
     assert(options.pages, chalk.red.bold(`${pluginName} options.pages is required!!!`))
   }
@@ -29,7 +29,7 @@ class autoRouterWebpackPlugin {
         
         // Fix: It's not allowed to load an initial chunk on demand. The chunk name "xxx" is already used by an entrypoint.
         const content = pages.length > 1 ? code.replace(/: "((\w|-)+)\"/gm, `: "${pageName}-$1"`) : code
-        const to = path.resolve(page, '../routes/index.js')
+        const to = path.resolve(page, 'routes.js')
 
         if (fs.existsSync(to) && fs.readFileSync(to, 'utf-8').trim() === content.trim()) {
           return

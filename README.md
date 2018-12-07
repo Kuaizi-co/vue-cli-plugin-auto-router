@@ -17,7 +17,7 @@ vue add @kuaizi/vue-cli-plugin-auto-router
   //...
   autoRouterConf: {
     pages: ['./src/pages/**/views/'],
-    importPrefix: '../views'
+    importPrefix: './views'
   }
   //...
 }
@@ -62,7 +62,7 @@ vue add @kuaizi/vue-cli-plugin-auto-router
 参数 | 类型 | 描述
 - | - | -
 pages | `String|Array` |  支持globby的匹配，支持字符串或者数组 [globbing-patterns](https://github.com/sindresorhus/globby#globbing-patterns)
-importPrefix | `String` | 默认是`../views/`, `vue-route-generator`默认的是`@/pages`, 异步组件的默认路径，eg：import('../views/account.vue')
+importPrefix | `String` | 默认是`./views/`, `vue-route-generator`默认的是`@/pages`, 异步组件的默认路径，eg：import('./views/account.vue')
 
 ## 使用
 
@@ -110,7 +110,7 @@ module.exports = {
 │  ├─index
 │  │  ├─components
 │  │  │  └─common
-│  │  ├─routes
+│  │  ├─routes.js
 │  │  ├─store
 │  │  └─views
 │  │      └─manage
@@ -123,7 +123,7 @@ module.exports = {
 
 `index` 和 `login` 分别是多页 `pages` 的单页目录，我们设置 `pages: './src/pages/*/views/'` 则可以匹配到 `index` 和 `login`, `views`是存放单页路由页面组件的目录
 
-每个单页目录中 `routes` 是和 `views` 同级，生成的`routes/index.js` 文件应用 `views`的路由页面组件路径为 `../views/xxx.vue`, 我们设置 `importPrefix: '../views'`
+每个单页目录中 `routes` 是和 `views` 同级，生成的`routes.js` 文件应用 `views`的路由页面组件路径为 `./views/xxx.vue`, 我们设置 `importPrefix: './views'`
 
 ## 支持 `route-meta` 标签
 
@@ -168,9 +168,9 @@ module.exports = {
 </template>
 ```
 
-`<route-meta>` 包含一个 `json` 的内容, 其中 `name`字段会同步到 `route/index.js` 所在的路由配置
+`<route-meta>` 包含一个 `json` 的内容, 其中 `name`字段会同步到 `route.js` 所在的路由配置
 
-启动项目后生成文件`index/routes/index.js`
+启动项目后生成文件`index/routes.js`
 
 ```
 export default [
