@@ -29,7 +29,8 @@ vue add @kuaizi/vue-cli-plugin-auto-router
 # webapck.config.js
 {
   // 默认为false
-  watch: true,
+  // 开发环境开启自动监听
+  watch: process.env.NODE_ENV === 'development',
   // 忽略目录
   watchOptions: {
     ignored: ['node_modules', 'tests'],
