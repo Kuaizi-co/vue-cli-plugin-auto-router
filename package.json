@@ -26,7 +26,8 @@
     "fs-extra": "^7.0.1",
     "globby": "^8.0.1",
     "vue-route-generator": "^0.3.3",
-    "vue-template-compiler": "^2.5.17"
+    "vue-template-compiler": "^2.5.17",
+    "watch": "^1.0.2"
   },
   "devDependencies": {
     "conventional-changelog-cli": "^2.0.11",

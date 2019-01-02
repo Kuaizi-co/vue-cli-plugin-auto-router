@@ -11,11 +11,13 @@ const chalk = require('chalk')
 const assert = require('assert')
 const globby = require('globby')
 const vueRouteGenerator = require('vue-route-generator')
+const watch = require('watch')
 const pluginName = 'autoRouterWebpackPlugin'
 
 class autoRouterWebpackPlugin {
   constructor (options) {
     this.options = Object.assign({ importPrefix: './views/' }, options)
+    this.watchState = {}
     assert(options, chalk.red.bold(`${pluginName} options is required!!!`))
     assert(options.pages, chalk.red.bold(`${pluginName} options.pages is required!!!`))
   }
@@ -26,10 +28,22 @@ class autoRouterWebpackPlugin {
       Array.isArray(pages) && pages.forEach(page => {
         const pageName = path.basename(path.dirname(page))
         const code = vueRouteGenerator.generateRoutes({ pages: page, importPrefix: this.options.importPrefix })
+        this.watchState[pageName] = this.watchState[pageName] ? this.watchState[pageName] : false
         
         // Fix: It's not allowed to load an initial chunk on demand. The chunk name "xxx" is already used by an entrypoint.
-        const content = pages.length > 1 ? code.replace(/: "((\w|-)+)\"/gm, `: "${pageName}-$1"`) : code
+        const content = code.replace(/: "((\w|-)+)\"/gm, `: "${pageName}-$1"`)
         const to = path.resolve(page, '../routes.js')
+
+        // New File must be trigger generate
+        !this.watchState[pageName] && watch.createMonitor(page, {
+          // 2000ms
+          interval: 2,
+          // only watch *.vue files
+          filter: f => /\.vue$/g.test(f)
+        }, monitor => {
+          this.watchState[pageName] = true
+          monitor.on("created", () => process.nextTick(generate))
+        })
 
         if (fs.existsSync(to) && fs.readFileSync(to, 'utf-8').trim() === content.trim()) {
           return
