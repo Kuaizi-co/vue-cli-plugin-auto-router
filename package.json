@@ -11,7 +11,8 @@
     "dev": "vue serve",
     "lint": "eslint index.js",
     "release": "release-it",
-    "deploy": "sh deploy.sh"
+    "deploy": "sh deploy.sh",
+    "kz-ci": "kz-commit"
   },
   "keywords": [
     "vue-cli-plugin-auto-router",
@@ -26,15 +27,27 @@
     "fs-extra": "^7.0.1",
     "globby": "^8.0.1",
     "vue-route-generator": "^0.3.3",
-    "vue-template-compiler": "^2.5.17",
     "watch": "^1.0.2"
   },
   "devDependencies": {
+    "vue-template-compiler": "^2.5.17",
     "conventional-changelog-cli": "^2.0.11",
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.0",
     "release-it": "^8.2.0"
   },
   "bugs": {
     "url": "https://github.com/kuaizi-co/vue-cli-plugin-auto-router/issues"
   },
-  "homepage": "https://github.com/kuaizi-co/vue-cli-plugin-auto-router#readme"
+  "homepage": "https://github.com/kuaizi-co/vue-cli-plugin-auto-router#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/*.js": [
+      "eslint --fix"
+    ]
+  }
 }
