@@ -35,7 +35,9 @@ class autoRouterWebpackPlugin {
         const to = path.resolve(page, '../routes.js')
 
         // New File must be trigger generate
-        !this.watchState[pageName] && watch.createMonitor(page, {
+        !this.watchState[pageName] &&
+        process.env.NODE_ENV !== 'production' &&
+        watch.createMonitor(page, {
           // 2000ms
           interval: 2,
           // only watch *.vue files
