@@ -1,4 +1,4 @@
-const Index = () => import(/* webpackChunkName: "login-index" */ '../views/index.vue')
+const Index = () => import(/* webpackChunkName: "login-index" */ './views/index.vue')
 
 export default [
   {

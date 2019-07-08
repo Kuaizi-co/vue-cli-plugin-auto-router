@@ -1,26 +1,32 @@
-const _404 = () => import(/* webpackChunkName: "index-404" */ '../views/404.vue')
+const _404 = () => import(/* webpackChunkName: "index-404" */ './views/404.vue')
+const _500 = () => import(/* webpackChunkName: "index-500" */ './views/500.vue')
 const Account = () =>
-  import(/* webpackChunkName: "index-account" */ '../views/account.vue')
-const Home = () => import(/* webpackChunkName: "index-home" */ '../views/home.vue')
-const Login = () => import(/* webpackChunkName: "index-login" */ '../views/login.vue')
+  import(/* webpackChunkName: "index-account" */ './views/account.vue')
+const Home = () => import(/* webpackChunkName: "index-home" */ './views/home.vue')
+const Login = () => import(/* webpackChunkName: "index-login" */ './views/login.vue')
 const Report = () =>
-  import(/* webpackChunkName: "index-report" */ '../views/report.vue')
+  import(/* webpackChunkName: "index-report" */ './views/report.vue')
 const System = () =>
-  import(/* webpackChunkName: "index-system" */ '../views/system.vue')
+  import(/* webpackChunkName: "index-system" */ './views/system.vue')
 const ManageIndex = () =>
-  import(/* webpackChunkName: "index-manage-index" */ '../views/manage/index.vue')
+  import(/* webpackChunkName: "index-manage-index" */ './views/manage/index.vue')
 const ManageHello = () =>
-  import(/* webpackChunkName: "index-manage-hello" */ '../views/manage/hello.vue')
+  import(/* webpackChunkName: "index-manage-hello" */ './views/manage/hello.vue')
 const ManageWord = () =>
-  import(/* webpackChunkName: "index-manage-word" */ '../views/manage/word.vue')
+  import(/* webpackChunkName: "index-manage-word" */ './views/manage/word.vue')
 const ManageWordId = () =>
-  import(/* webpackChunkName: "index-manage-word-id" */ '../views/manage/word/_id.vue')
+  import(/* webpackChunkName: "index-manage-word-id" */ './views/manage/word/_id.vue')
 
 export default [
   {
     name: '404',
     path: '/404',
     component: _404
+  },
+  {
+    name: '500',
+    path: '/500',
+    component: _500
   },
   {
     name: 'account',
