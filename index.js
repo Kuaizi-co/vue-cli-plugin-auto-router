@@ -9,7 +9,7 @@ const merge = (source, dest) => {
   return source
 }
 
-module.exports = (api, options) => {
+module.exports = (api) => {
   const defaultConf = { pages: './src/pages/*/views/', importPrefix: './views/' }
   const pkgFile = path.resolve(process.cwd(), 'package.json')
   let pkgConf = {}
