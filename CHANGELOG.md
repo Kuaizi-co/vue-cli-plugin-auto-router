@@ -1,3 +1,7 @@
+## [1.0.1](https://github.com/kuaizi-co/vue-cli-plugin-auto-router/compare/v1.0.0...v1.0.1) (2019-08-10)
+
+
+
 # [1.0.0](https://github.com/kuaizi-co/vue-cli-plugin-auto-router/compare/v0.0.9...v1.0.0) (2019-08-10)
 
 

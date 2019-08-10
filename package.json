@@ -1,6 +1,6 @@
 {
   "name": "@kuaizi/vue-cli-plugin-auto-router",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Vue Router route generator",
   "main": "./index.js",
   "repository": {
