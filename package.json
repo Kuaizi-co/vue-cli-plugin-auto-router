@@ -12,7 +12,7 @@
     "lint": "eslint index.js",
     "release": "release-it",
     "deploy": "sh deploy.sh",
-    "kz-ci": "kz-commit"
+    "commit": "git-cz"
   },
   "keywords": [
     "vue-cli-plugin-auto-router",

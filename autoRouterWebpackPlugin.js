@@ -56,8 +56,7 @@ class autoRouterWebpackPlugin {
       })
     }
     
-    compiler.hooks.run.tap(pluginName, generate)
-    compiler.hooks.watchRun.tap(pluginName, generate)
+    compiler.hooks.done.tap(pluginName, generate)
   }
 }
 
