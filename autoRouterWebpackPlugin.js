@@ -45,6 +45,7 @@ class autoRouterWebpackPlugin {
         }, monitor => {
           this.watchState[pageName] = true
           monitor.on("created", () => process.nextTick(generate))
+          monitor.on("remove", () => process.nextTick(generate))
         })
 
         if (fs.existsSync(to) && fs.readFileSync(to, 'utf-8').trim() === content.trim()) {
